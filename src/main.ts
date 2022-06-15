@@ -30,7 +30,7 @@ export async function execWithOutput(
 }
 
 function extractPublishedPackages(line: string) {
-  let newTagRegex = /New tag:\s+(@[^/]+\/[^@]+|[^/]+)@([^\s]+)/
+  let newTagRegex = /New tag:\s+([^\s]+)/
   let match = line.match(newTagRegex)
 
   if (match === null) {
